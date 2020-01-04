@@ -24,8 +24,8 @@ $(document).ready(function(){
 		startDate: new Date()
 	});
 
-	/*$('.datepicker').datepicker({
-		format: 'mm/dd/yyyy',
-		startDate: '-3d'
-	});*/
+	$('#endDate').datepicker({
+		format: 'dd.mm.yyyy',
+		startDate: new Date()
+	});
 });
