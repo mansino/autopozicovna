@@ -133,6 +133,9 @@ body{
 .carousel-item > div{
 	background: #fff;
 }
+.carousel-item > div .car_name, .carousel-item > div .car_info{
+	padding: 0 0.5rem;
+}
 .carousel-item > div .car_name{
 	margin: .5rem 0 0 0;
 	font-weight: bold;
@@ -140,12 +143,12 @@ body{
 	padding-right: 100px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: no-wrap;
+	white-space: nowrap;
 }
 .carousel-item > div .car_name span{
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: .5rem;
 	height: 100%;
 	width: 100px;
 	text-align: right;
@@ -224,11 +227,18 @@ footer .footer_info{
 	color: #d9a037;
 	margin-bottom: 1.75rem;
 }
+.footer_info .col-md-6 p:last-of-type{
+	margin-bottom: 0;
+}
 footer p{
 	color: #cccccc;
 }
 footer .footer_bg{
 	background: #252525;
+	padding: 1rem 0;
+}
+footer .footer_bg p{
+	margin: 0;
 }
 .white_txt{
 	color: #fff;
