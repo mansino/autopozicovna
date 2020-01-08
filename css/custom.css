@@ -45,6 +45,10 @@ body{
 .col-fixed-350{
 	flex: 0 0 350px;
 	background: #fff;
+	z-index: 1;
+}
+.col-fixed-350.custom_border{
+	border: 0!important;
 }
 .col-fixed-350 .wrap{
 	padding: 1rem;
@@ -188,7 +192,17 @@ body{
 	color: #343434;
 }
 #main_offer{
-	padding: 3rem 0;
+	padding: 6rem 0 3rem 0;
+	position: relative;
+}
+#main_offer .main_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+	background: url("../img/main_bg.png") center center no-repeat;
+	background-size: cover;
 }
 #main_offer .header_title{
 	background: #b99365;
@@ -197,6 +211,41 @@ body{
 	padding: 0 1rem;
 	color: #fff;
 	margin: 0;
+}
+#main_offer .no-padding{
+	margin-top: 1rem;
+}
+#main_offer .main_head{
+	height: 60px;
+	background: rgba(185, 147, 101, 0.3);
+}
+#main_offer .main_head p{
+	color: #fff;
+	display: flex;
+	margin: 0;
+    height: 100%;
+    line-height: 60px;
+}
+#main_offer .main_head p span{
+	flex: 0 0 33.33%;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	text-align: center;
+}
+#main_offer .main_content_w{
+	display: flex;
+}
+#main_offer .main_content_w p img{
+	height: 24px;
+	vertical-align: middle;
+	margin-right: 0.5rem;
+}
+#main_offer .main_content_w > div{
+	padding: 0 1.5rem;
+}
+#main_offer .main_content_w p{
+	vertical-align: middle;
+	margin: 1.5rem 0;
 }
 #cards, #slider{
 	padding: 2rem 0;
@@ -288,7 +337,11 @@ footer .footer_bg p{
     }
 }
 @media (min-width: 576px) {
-    .carousel-item {
+    #main_offer .no-padding{
+		padding: 0;
+		margin-top: calc(500px - 6rem - 60px);
+	}
+	.carousel-item {
         margin-right: 0;
     }
     /* show 2 items */
